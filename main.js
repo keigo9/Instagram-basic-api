@@ -29,7 +29,7 @@ async function instagramBasicDisplayApiProfile() {
 }
 
 // 投稿IDを取得する
-async function instagramBasicDisplayApiPostId() {
+async function instagramBasicDisplayApiPosts() {
   const url = `https://graph.instagram.com/${userId}/media?fields=id,caption,media_type,media_url,permalink&access_token=${accessToken}`;
   const response = await instagramApi(url, "GET", "");
 
@@ -72,4 +72,4 @@ async function instagramApi(url, method, payload) {
 }
 
 // instagramBasicDisplayApiProfile();
-instagramBasicDisplayApiPostId();
+instagramBasicDisplayApiPosts();
